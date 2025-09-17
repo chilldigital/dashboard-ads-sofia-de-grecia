@@ -10,11 +10,14 @@ export default async function handler(req, res) {
     datePreset = 'this_month',
     from = null,
     to = null,
-    account = '',
+    // account eliminado del destructuring
     timezone = 'America/Buenos_Aires',
     source = '',
     ...rest
   } = params;
+
+  // Obtener el valor de account solo desde variable de entorno
+  const account = process.env.WINDSOR_ACCOUNT;
 
   // Normalizar timezone
   function normalizeTimezone(tz) {

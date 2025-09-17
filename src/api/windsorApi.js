@@ -5,7 +5,7 @@ export async function getSummaryKpis({
   datePreset = "this_month",
   from = null,
   to = null,
-  account = DEFAULT_ACCOUNT,
+  // account eliminado
   timezone = DEFAULT_TZ,
   source = DEFAULT_SOURCE,
 } = {}) {
@@ -19,7 +19,7 @@ export async function getSummaryKpis({
     datePreset,
     from,
     to,
-    account,
+    // account eliminado
     timezone,
     source,
   });
